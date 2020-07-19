@@ -1,0 +1,41 @@
+﻿@model FolderTransferApp.Models.FolderandFileModel
+
+@{
+    ViewBag.Title = "Results Page";
+}
+
+<h2>Results Page</h2>
+
+<div>
+    <h4>FolderandFileModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sourcePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sourcePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.count)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.count)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to folder select", "FolderSelect")
+</p>

@@ -1,0 +1,37 @@
+﻿@model FolderTransferApp.Models.FolderandFileModel
+
+@{
+    ViewBag.Title = "Folder Select";
+}
+
+<h2>Folder Select</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<form action="/Home/TestPage" method="post">
+    <table>
+        <tr>
+            <p>Please provide a source folder and a target folder</p>
+
+            <td>
+                Source Path:
+                @Html.EditorFor(model => model.sourcePath)
+            </td>
+            <td>
+                Target Path:
+                @Html.EditorFor(model => model.targetPath)
+            </td>
+            <td>
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
